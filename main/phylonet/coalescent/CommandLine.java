@@ -633,12 +633,12 @@ public class CommandLine {
     					allleaves.addAll(Arrays.asList(leaves));
     				}
     			}
-    			if (annotation == 6) {
-	    			for (String leaf: allleaves) {
-						GlobalMaps.taxonIdentifier.taxonId(leaf);
-	    			}
-    			}
     		}
+    		if (annotation == 6) {
+    			for (String leaf: allleaves) {
+					GlobalMaps.taxonIdentifier.taxonId(leaf);
+    			}
+			}
     	} catch (ParseException e) {
     		throw new RuntimeException("Failed to Parse Tree number: " + l ,e);
     	}
